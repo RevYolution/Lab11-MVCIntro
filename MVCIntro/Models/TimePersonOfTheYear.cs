@@ -71,7 +71,7 @@ namespace MVCIntro.Models
             string[] allPeople = File.ReadAllLines(newPath);
 
             //Goes through the string array and separates all the items with a ','. 
-            for (int i = 0; i < allPeople.Length; i++)
+            for (int i = 1; i < allPeople.Length; i++)
             {
                 string[] items = allPeople[i].Split(',');
 
@@ -81,8 +81,8 @@ namespace MVCIntro.Models
                     Honor = items[1],
                     Name = items[2],
                     Country = items[3],
-                    BirthYear = Convert.ToInt32(items[4]),
-                    DeathYear = Convert.ToInt32(items[5]),
+                    BirthYear = (items[4] =="") ? 0 : Convert.ToInt32(items[4]),
+                    DeathYear = (items[5] == "") ? 0 : Convert.ToInt32(items[5]),
                     Title = items[6],
                     Category =items[7],
                     Context = items[8]
@@ -93,5 +93,7 @@ namespace MVCIntro.Models
             IEnumerable<TimePersonOfTheYear> peopleList = people.Where(p => (p.Year >= firstYear) && (p.Year <= secondYear)).ToList();
             return peopleList;
         }
+
+
     }
 }

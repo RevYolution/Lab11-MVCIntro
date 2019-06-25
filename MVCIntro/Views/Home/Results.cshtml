@@ -1,4 +1,4 @@
-﻿@model MVCIntro.Models.TimePersonOfTheYear
+﻿@model IEnumerable<MVCIntro.Models.TimePersonOfTheYear>
 
 <!Doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <table>
+    <table id="result_table">
         <thead>
 
             <tr>
@@ -32,8 +32,8 @@
                 <td>@item.Honor</td>
                 <td>@item.Year</td>
                 <td>@item.Title</td>
-                <td>@item.Born</td>
-                <td>@item.Died</td>
+                <td>@item.BirthYear</td>
+                <td>@item.DeathYear</td>
                 <td>@item.Country</td>
                 <td>@item.Context</td>
                 <td>@item.Category</td>
