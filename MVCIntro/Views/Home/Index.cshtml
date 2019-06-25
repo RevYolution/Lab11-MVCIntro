@@ -1,7 +1,20 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
-<h1>Hitting views from controller redirect.</h1>
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Time Person of the Year</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="home">
+    <div class="book">
+        <div class="logo">TIME</div>
+        <div class="description">
+            TIME <span>PERSON</span> OF THE YEAR.
+        </div>
+        <form method="post">
+            <input type="number" name="begYear" min="1927" value="1927" />
+            <input type="number" name="endYear" max="2016" value="2016" />
+            <input type="submit" value="View" />
+        </form>
+    </div>
+</body>
+</html>
