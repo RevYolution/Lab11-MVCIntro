@@ -1,0 +1,47 @@
+﻿@model MVCIntro.Models.TimePersonOfTheYear
+
+<!Doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Result of Person of the Year Search</title>
+    @*<link rel="stylesheet" href="~/styles/StyleSheet.css" type="text/css" />*@
+
+</head>
+<body>
+
+    <table>
+        <thead>
+
+            <tr>
+                <th>Name</th>
+                <th>Honor</th>
+                <th>Year</th>
+                <th>Title</th>
+                <th>Born</th>
+                <th>Died</th>
+                <th>Country</th>
+                <th>Context</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Honor</td>
+                <td>@item.Year</td>
+                <td>@item.Title</td>
+                <td>@item.Born</td>
+                <td>@item.Died</td>
+                <td>@item.Country</td>
+                <td>@item.Context</td>
+                <td>@item.Category</td>
+            </tr>
+            }
+        </tbody>
+
+
+    </table>
+</body>
+</html>

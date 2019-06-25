@@ -44,12 +44,22 @@ namespace MVCIntro.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// Gets/sets the area the person is involved with
+        /// </summary>
+        public string Category { get; set; }
+
+        /// <summary>
+        /// Gets/sets the reason the person is receiving the person of the year title. 
+        /// </summary>
+        public string Context { get; set; }
+
+        /// <summary>
         /// Creates a list of people and all their attributes from the given CSV file.
         /// </summary>
         /// <param name="firstYear">First year of the search</param>
         /// <param name="secondYear">Last year of the search</param>
         /// <returns></returns>
-        public static List<TimePersonOfTheYear> GetPeople(int firstYear, int secondYear)
+        public static IEnumerable<TimePersonOfTheYear> GetPeople(int firstYear, int secondYear)
         {
             List<TimePersonOfTheYear> people = new List<TimePersonOfTheYear>();
 
@@ -73,12 +83,14 @@ namespace MVCIntro.Models
                     Country = items[3],
                     BirthYear = Convert.ToInt32(items[4]),
                     DeathYear = Convert.ToInt32(items[5]),
-                    Title = items[6]
+                    Title = items[6],
+                    Category =items[7],
+                    Context = items[8]
                 });
             }
 
             //Selects only people within the bounds of the search years given. 
-            List<TimePersonOfTheYear> peopleList = people.Where(p => (p.Year >= firstYear) && (p.Year <= secondYear)).ToList();
+            IEnumerable<TimePersonOfTheYear> peopleList = people.Where(p => (p.Year >= firstYear) && (p.Year <= secondYear)).ToList();
             return peopleList;
         }
     }

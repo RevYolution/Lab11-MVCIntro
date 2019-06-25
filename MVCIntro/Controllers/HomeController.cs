@@ -41,7 +41,7 @@ namespace MVCIntro.Controllers
         [HttpGet]
         public IActionResult Results(int firstYear, int secondYear)
         {
-            List<TimePersonOfTheYear> people = TimePersonOfTheYear.GetPeople(firstYear, secondYear);
+            IEnumerable<TimePersonOfTheYear> people = TimePersonOfTheYear.GetPeople(firstYear, secondYear);
             return View(people);
         }
     }
