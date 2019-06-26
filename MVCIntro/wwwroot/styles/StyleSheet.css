@@ -1,0 +1,41 @@
+﻿#home {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: url('http://www.wallpaperbetter.com/wallpaper/803/13/189/bw-forest-trees-dark-hd-1080P-wallpaper-middle-size.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+.book {
+    color:aliceblue;
+    grid-column: 2/4;
+    grid-row: 2;
+    height: 200%;
+    text-align:center;
+    border: solid;
+    border-radius: 5px;
+    border-color: red;
+    align-content: center;
+    max-width: 50%;
+
+}
+
+
+#results_table {
+    background: url('http://www.wallpaperbetter.com/wallpaper/803/13/189/bw-forest-trees-dark-hd-1080P-wallpaper-middle-size.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+table {
+    background-color: hsla(258, 100%, 20%, 0.79);
+    border: solid;
+    color: aliceblue;
+ 
+}
+
+td{
+    border:solid;
+    border-color:black;
+}
