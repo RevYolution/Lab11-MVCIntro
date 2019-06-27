@@ -38,3 +38,4 @@ Then select and open ```MVCIntro.sln```
 ------------------------------
 
 ## Change Log
+1.1 Added in images of app start, use, and results. 
