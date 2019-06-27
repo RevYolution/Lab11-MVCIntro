@@ -30,12 +30,11 @@ Then select and open ```MVCIntro.sln```
 ## Visuals
 
 ##### Application Start
-COMING SOON!!
+![Start Page](https://github.com/RevYolution/Lab11-MVCIntro/blob/master/assets/Start%20up.PNG)
 ##### Using the Application
-COMING SOON!!
+![Searching](https://github.com/RevYolution/Lab11-MVCIntro/blob/master/assets/InUse.PNG)
 ##### Application End
-COMING SOON!!
-
+![Results](https://github.com/RevYolution/Lab11-MVCIntro/blob/master/assets/SearchResult.PNG)
 ------------------------------
 
 ## Change Log
